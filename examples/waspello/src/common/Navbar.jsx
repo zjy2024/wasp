@@ -6,7 +6,8 @@ import { getName } from "../auth/user";
 import { logout } from "wasp/client/auth";
 
 const Navbar = ({ user }) => {
-  const name = getName(user);
+  // const name = getName(user);
+  const name = "demo user"
 
   return (
     <div className="navbar">
