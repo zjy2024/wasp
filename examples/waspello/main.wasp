@@ -13,7 +13,7 @@ app waspello {
     userEntity: User,
     methods: {
       usernameAndPassword: {},
-      google: {}
+    //   google: {}
     },
     onAuthFailedRedirectTo: "/login"
   }
@@ -25,15 +25,15 @@ page Main {
     component: import Main from "@src/cards/MainPage.jsx"
 }
 
-route SignupRoute { path: "/signup", to: Signup }
-page Signup {
-    component: import Signup from "@src/auth/SignupPage.jsx"
-}
+// route SignupRoute { path: "/signup", to: Signup }
+// page Signup {
+//     component: import Signup from "@src/auth/SignupPage.jsx"
+// }
 
-route LoginRoute { path: "/login", to: Login }
-page Login {
-    component: import Login from "@src/auth/LoginPage.jsx"
-}
+// route LoginRoute { path: "/login", to: Login }
+// page Login {
+//     component: import Login from "@src/auth/LoginPage.jsx"
+// }
 
 // Entities
 

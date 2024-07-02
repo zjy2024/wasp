@@ -1,21 +1,25 @@
 import { HttpError } from "wasp/server";
 
 export const getListsAndCards = async (args, context) => {
-  if (!context.user) { throw new HttpError(403) }
+  // if (!context.user) { throw new HttpError(403) }
   return context.entities.List.findMany({
     // We want to make sure user can get only his own info.
-    where: { user: { id: context.user.id } },
-    include: { cards: true }
+    where: { user: { id: 1 } },
+    include: { cards: false }
   })
 }
 
 export const createList = async ({ name, pos }, context) => {
-  if (!context.user) { throw new HttpError(403) }
+  // if (!context.user) { throw new HttpError(403) }
+  
   return context.entities.List.create({
     data: {
-      name,
-      pos,
-      user: { connect: { id: context.user.id } }
+      name: 'zhangsan',
+      pos: 65535,
+      user: { connect: { id: 
+        // context.user.id
+        1
+      } }
     }
   })
 }

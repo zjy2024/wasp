@@ -36,6 +36,7 @@ const createListIdToSortedCardsMap = (listsAndCards) => {
 }
 
 const MainPage = ({ user }) => {
+  // TODO 如果没有鉴权，这里会报错
   const { data: listsAndCards, isFetchingListsAndCards, errorListsAndCards }
     = useQuery(getListsAndCards)
 
